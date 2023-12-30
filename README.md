@@ -22,7 +22,7 @@
 
 ### 소셜 로그인 (kakao, naver, google)
 
-### S3
+### S3 ✔
 
 ### Redis
 

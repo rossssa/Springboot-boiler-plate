@@ -48,7 +48,7 @@ jobs:
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/first
 
    # 위 과정에서 푸시한 이미지를 ec2에서 풀받아서 실행시키는 과정 
-  run-docker-image-on-ec2:
+  run-docker-image-on-server:
     # build-docker-image (위)과정이 완료되어야 실행됩니다.
     needs: build-docker-image
     runs-on: self-hosted
@@ -64,7 +64,7 @@ jobs:
 
       # 3. 최신 이미지를 컨테이너화하여 실행시킵니다
       - name: docker run new container
-        run: sudo docker run --name first --rm -d -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/first
+        run: sudo docker run -d -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/first
 
       # 4. 미사용 이미지를 정리합니다
       - name: delete old docker image

@@ -55,7 +55,7 @@ jobs:
 
     steps:
       # 0. DockerHub 로그인
-      - name: docker login
+      - name: docker Login
         run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
         
       # 1. 최신 이미지를 풀받습니다

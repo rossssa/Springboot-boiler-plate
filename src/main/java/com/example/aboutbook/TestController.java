@@ -18,7 +18,7 @@ public class TestController {
     @Operation(summary = "테스트", description = "테스트!")
     public ApiResponse<String> signup() throws Exception {
         try{
-            return new ApiResponse<>("test success.");
+            return new ApiResponse<>("test 완.");
         } catch (Exception e){
             throw new Exception(e.getMessage());
         }

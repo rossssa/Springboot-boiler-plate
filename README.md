@@ -26,9 +26,9 @@
 
 ### Redis
 
-### Docker
+### Docker ✔
 
-### CI/CD
+### CI/CD ✔
 
 ### Firebase
 

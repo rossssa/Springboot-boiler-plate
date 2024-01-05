@@ -23,4 +23,14 @@ public class TestController {
             throw new Exception(e.getMessage());
         }
     }
+
+    @GetMapping("/2")
+    @Operation(summary = "테스트2", description = "테스트2!")
+    public ApiResponse<String> signup2() throws Exception {
+        try{
+            return new ApiResponse<>("test2 완.");
+        } catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
 }

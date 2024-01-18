@@ -39,6 +39,9 @@ public class User implements UserDetails {
     @Column(name="role")
     private String role;
 
+    @Column(name="device_token")
+    private String deviceToken;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> authorities = new ArrayList<>();
